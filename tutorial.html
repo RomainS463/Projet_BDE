@@ -1,24 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutorial</title>
-    <link rel = "stylesheet" type = "text/css" href = "style.css" />
-    <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel = "stylesheet" type = "text/css" href = "./css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.png"/>
 </head>
-<body>
 <body>
     <header>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="tutorial.html">Tutorial</a></li>
-            <li><a href="project.html">Project</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="./index.html"><i class="fas fa-gamepad"></i> Game</a></li>
+            <li><a class="active" href="./tutorial.html"><i class="fas fa-book"></i> Tutorial</a></li>
+            <button class="dark-mode_button" onClick="darkMode()" style="vertical-align:middle"><i class="far fa-lightbulb"></i></button>
             <li class= "invader_text"><a>Space Invaders</a></li>
         </ul>
     </header>
-    <h1><u>Explication du jeu</u></h1>
+    <h1><u>Explanation of the game</u></h1>
+    <p>
+    Space Invaders is a fixed shooter in which the player controls a laser cannon by moving it horizontally across the bottom of the screen and firing at descending aliens. The aim is to defeat five rows of eleven aliens—although some versions feature different numbers—that move horizontally back and forth across the screen as they advance toward the bottom of the screen.
+    The player defeats an alien and earns points by shooting it with the laser cannon. As more aliens are defeated, the aliens' movement speed up. Defeating all the aliens on-screen brings another wave that is more difficult, a loop which can continue endlessly.
+    The aliens attempt to destroy the player's cannon by firing projectiles while they approach the bottom of the screen. Bases are lost upon being destroyed. Play continues until either all bases are gone or if the alien reaches the bottom of the screen, when the game is over.
+    </p>
+    <h2><u>Controls</u></h2>
+    <div id="table_control">
+        <table id="Controls">
+            <tr>
+                <th>Action</th>
+                <th>Keybind</th>
+                <th>Symbol</th>
+            </tr>
+            <tr>
+                <td>Move to the right side</td>
+                <td>Right Key</td>
+                <td><i class="fas fa-arrow-right"></i></td>
+            </tr>
+            <tr>
+                <td>Move to the left side</td>
+                <td>Left Key</td>
+                <td><i class="fas fa-arrow-left"></i></td>
+            </tr>
+            <tr>
+                <td>Shoot a laser</td>
+                <td>Spacebar</td>
+                <td>____</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </body>
 </html>

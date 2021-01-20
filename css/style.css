@@ -1,0 +1,245 @@
+ul { 
+    list-style-type: none; /*On enlève les bullets de la liste*/
+    border: 1px solid #e7e7e7; /*On ajoute le cadre gris*/
+    margin: 0; /*On fait démarrer la barre tout en haut*/
+    padding: 0;
+    overflow: hidden; 
+    background-color: #f3f3f3;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+}
+
+li { /*On met chaque element de la liste les uns à la suite des autres sur la gauche*/
+    float : left;
+}
+
+li a {
+    display: block;
+    color: #666; /*Couleur du texte des pages de navigation*/
+    text-align: center;
+    padding: 16px 18px;
+    font-size: 16px;
+    text-decoration: none; /*On enleve le soulignage)*/
+}
+
+li a:hover:not(.active) { /*On modifie la couleur de la case quand on passe la souris dessus et qu'on se trouve pas sur la page en question */
+    background-color: #ddd;
+}
+
+
+li a.active{ /* On modifie la couleur du texte et de la case pour la page où l'on se trouve dèjà*/
+    background-color: #6e6a66ad;
+    color: white;
+}
+
+p {
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+table{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+th, td{
+    text-align: center;
+    padding: 12px;
+}
+
+tr:nth-child(even){background-color: #d4cdcd8e}
+
+
+th {
+    background-color: #6e6a66ad;
+    color: white;
+}
+
+.invader_text{
+    display: block;
+    text-align: center;
+    float: right;
+    border-left: 1px solid #bbb;
+    background-color: #ddd;
+}
+
+
+h1{
+    padding: 10px;
+    display: block;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    padding: 10px;
+    display:block;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dark-mode_button {
+    background-color: white;
+    color: black;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display:block;
+    float: right;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.918);
+    border-radius: 5px;
+  }
+  
+.dark-mode_button:hover {background-color: #e7e7e7;}
+
+.dark-mode {
+    background-color: #252525;
+    background: url(../img/background.png);
+    color: #e6e8ee;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font: 16px sans-serif;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  font-size: 11px;
+  background: black;
+  color: white;
+}
+
+.game-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+}
+.game {
+  width: 800px;
+  height: 600px;
+  background: url(../img/background.png);
+  animation: scroll-background 5s linear infinite;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+@keyframes scroll-background {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: 256px;
+  }
+}
+
+.game .enemy {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -18px;
+  width: 40px;
+}
+
+.game .player {
+  position: absolute;
+  margin-left: -20px;
+  width: 40px;
+}
+
+.game .laser {
+  position: absolute;
+  margin-left: -2.5px;
+  height: 30px;
+}
+
+.game .enemy-laser {
+  position: absolute;
+  margin-left: -2.5px;
+  height: 30px;
+}
+
+.congratulations {
+  display: none;
+  position: absolute;
+  background: #c7a526;
+  color: white;
+  padding: 20px 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  animation: pop-in 1s;
+}
+
+.game-over {
+  display: none;
+  position: absolute;
+  background: #6b1818;
+  color: white;
+  padding: 20px 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  animation: pop-in 1s;
+}
+
+.btn {
+  border: 2px solid #36bbf5;
+  border-radius: 3px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(
+    to bottom,
+    #fff 0%,
+    #fff 49%,
+    #f5f5f5 50%,
+    #eee 100%
+  );
+  padding: 10px 40px;
+  font: 14px sans-serif;
+}
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100px);
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0, 30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
